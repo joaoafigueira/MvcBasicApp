@@ -13,5 +13,6 @@
         /* EF Relation */
 
         public Fornecedor Fornecedor { get; set; }
+    
     }
 }
