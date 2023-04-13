@@ -14,6 +14,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Adicionando a tela de erro de banco de dados (para desenvolvimento)
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+// Habilita compilação de run time para todos os ambientes.
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
 // Adicionando o Identity
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
